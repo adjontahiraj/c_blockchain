@@ -22,6 +22,7 @@ class Transaction {
         string getNonce();
         void setHash(string hash);
         string getHash();
+        void printTransaction();
 
 
         private:

@@ -13,6 +13,7 @@ Transaction::Transaction(){
 
 Transaction::Transaction(Transaction* next, int amount, string sender, string receiver, string nonce, string hash) {
 	this->next = next;
+	this->amount = amount;
 	this->sender = sender;
 	this->receiver = receiver;
 	this->nonce = nonce;
@@ -42,7 +43,7 @@ string Transaction::getSender(){
 	return sender;
 }
 
-void Transaction::setReceiver(string reciever) {
+void Transaction::setReceiver(string receiver) {
 	this->receiver = receiver;
 }
 
@@ -64,6 +65,10 @@ void Transaction::setHash(string hash) {
 
 string Transaction::getHash() {
 	return hash;
+}
+
+void Transaction::printTransaction(){
+  cout<<"Amount: " + to_string(this->getAmount())+ "\nSender: " + this->getSender() + "\nReceiver: " + this->getReceiver() + "\nNonce: "+ this->getNonce() + "\nHash: " +this->getHash()<<endl;
 }
 
 

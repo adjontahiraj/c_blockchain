@@ -1,7 +1,6 @@
 #include "transaction.h"
 #include <string>
 #include <iostream>
-#include <stdio.h>
 #include <string.h>
 #include <cstdio>
 #include <cstdlib>
