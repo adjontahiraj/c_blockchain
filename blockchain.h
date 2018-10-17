@@ -17,6 +17,7 @@ class Blockchain {
 		string findNonce(int amount, string sender, string receiver);
 		string hashCode(string transaction);
 		string transToString(Transaction* t);
+		Transaction* getHead();
 	private:
 		Transaction* head;
 };

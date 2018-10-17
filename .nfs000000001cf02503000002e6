@@ -6,10 +6,6 @@ Blockchain::Blockchain(){
     head=NULL;
 }
 
-Transaction* Blockchain::getHead() {
-    return this->head;
-}
-
 void Blockchain::addTransaction(int amount, string sender, string receiver) {
     Transaction* t1 = new Transaction();
     t1->setAmount(amount);
@@ -38,11 +34,10 @@ void Blockchain::findTransaction(string sender) {
 
 bool Blockchain::verifyAndPrint() {
     Transaction* tmp = head;
-    Transaction* print = head;
     while(tmp) {
         if(tmp->getNext() != NULL){
             if(tmp->getHash() != hashCode(to_string(tmp->getNext()->getAmount())+tmp->getNext()->getSender() +tmp->getNext()->getReceiver()+tmp->getNext()->getNonce())) {
-                cout<<"Found an error, here are the mismatch transactions:\n"<<endl;
+                cout<<"GET HACKED SCRUB\n"<<endl;
                 tmp->printTransaction();
                 tmp->getNext()->printTransaction();
                 return false;
@@ -50,15 +45,7 @@ bool Blockchain::verifyAndPrint() {
         }
         tmp=tmp->getNext();
     }
-
-    cout<<"All values match the hashes."<<endl;
-    cout<<"\nHere is the full chain: \n";
-
-    while(print) {
-        print->printTransaction();
-        cout<<"\n";
-        print=print->getNext();
-    }
+    cout<<"NO HACKING HERE"<<endl;
     return true;
 }
 
