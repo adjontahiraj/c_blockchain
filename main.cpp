@@ -8,8 +8,9 @@
 using namespace std;
 
 int main() {
-	/*
+	
 	Blockchain* b1 = new Blockchain();
+   /*
 	cout<<"ADDING TRANSACTION \n"<<endl;
 	b1->addTransaction(85,"Dave","Rocky");
 	cout<<"ADDING TRANSACTION \n"<<endl;
